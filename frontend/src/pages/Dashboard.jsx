@@ -1,30 +1,12 @@
 import React from "react";
-import "./Dashboard.css";
+import Layout from "../components/Layout";
+import FeaturedScholarships from "../components/FeaturedScholarships";
+import "../components/Dashboard.css"; // Create this for main/dashboard styles
 
 export default function Dashboard() {
   return (
-    <div className="dashboard-root">
-      {/* Top Navigation Bar */}
-      <nav className="dashboard-navbar">
-        <div className="dashboard-navbar-left">
-          <span className="dashboard-logo">
-            <span className="dashboard-logo-icon">🎓</span>
-            Scholar
-          </span>
-          <span className="dashboard-portal">Scholarship Portal</span>
-        </div>
-        <div className="dashboard-navbar-menu">
-          <a href="#" className="active">DASHBOARD</a>
-          <a href="#">SEARCH & APPLY</a>
-          <a href="#">PROFILE</a>
-          <a href="#">SETTINGS</a>
-          <a href="#">FEEDBACK</a>
-          <a href="#">LOGOUT</a>
-        </div>
-      </nav>
-
+    <Layout>
       <div className="dashboard-content">
-        {/* Sidebar/Profile Card */}
         <aside className="dashboard-profile-card">
           <div className="profile-avatar">
             <span className="profile-avatar-icon">👤</span>
@@ -93,17 +75,9 @@ export default function Dashboard() {
           </div>
 
           {/* Featured Scholarships */}
-          <section className="dashboard-featured">
-            <h2 className="featured-title">Featured Scholarships</h2>
-            <p className="featured-desc">Handpicked opportunities that match your profile</p>
-            <ul className="featured-list">
-              <li>Merit-based Scholarship 2024</li>
-              <li>Women in STEM Grant</li>
-              <li>Community Service Award</li>
-            </ul>
-          </section>
+          <FeaturedScholarships />
         </main>
       </div>
-    </div>
+    </Layout>
   );
 }
