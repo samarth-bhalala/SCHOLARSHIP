@@ -1,61 +1,62 @@
 .dashboard-navbar {
-  background: #7c3aed;
-  color: #fff;
+  background: #fff;
+  color: #222;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 40px 16px 40px;
+  padding: 20px 32px 12px 32px;
+  border-bottom: 1px solid #f0f0f0;
 }
 .dashboard-navbar-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .dashboard-logo {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
+  color: #222;
 }
 .dashboard-logo-icon {
-  font-size: 2.2rem;
-  margin-right: 8px;
+  font-size: 1.7rem;
+  margin-right: 6px;
 }
 .dashboard-portal {
-  color: #d1c4e9;
+  color: #888;
   font-size: 1rem;
-  margin-left: 10px;
+  margin-left: 8px;
 }
 .dashboard-navbar-menu {
   display: flex;
-  gap: 32px;
-  font-size: 1.1rem;
+  gap: 24px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .dashboard-navbar-menu a {
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 2px;
+  color: #222;
   border-bottom: 2px solid transparent;
-  transition: border 0.2s;
+  padding-bottom: 2px;
+  transition: border 0.2s, color 0.2s;
 }
 .dashboard-navbar-menu a.active,
 .dashboard-navbar-menu a:hover {
-  border-bottom: 2px solid #fff;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
-
 @media (max-width: 768px) {
   .dashboard-navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px 20px;
+    padding: 12px 10px;
   }
   .dashboard-navbar-left {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .dashboard-navbar-menu {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
   }
   .dashboard-navbar-menu a {
@@ -66,7 +67,8 @@
   }
   .dashboard-navbar-menu a.active,
   .dashboard-navbar-menu a:hover {
-    border-left: 4px solid #fff;
+    color: var(--accent);
+    border-left: 4px solid var(--accent);
     border-bottom: none;
   }
 }

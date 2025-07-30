@@ -12,12 +12,12 @@ export default function Header() {
         <span className="dashboard-portal">Scholarship Portal</span>
       </div>
       <div className="dashboard-navbar-menu">
-        <a href="#" className="active">DASHBOARD</a>
-        <a href="#">SEARCH & APPLY</a>
-        <a href="#">PROFILE</a>
-        <a href="#">SETTINGS</a>
-        <a href="#">FEEDBACK</a>
-        <a href="#">LOGOUT</a>
+        <a href="/Dashboard">DASHBOARD</a>
+        <a href="/search">SEARCH & APPLY</a>
+        <a href="/profile">PROFILE</a>
+        <a href="/settings">SETTINGS</a>
+        <a href="/feedback">FEEDBACK</a>
+        <a href="/logout">LOGOUT</a>
       </div>
     </nav>
   );

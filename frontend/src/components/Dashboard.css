@@ -1,7 +1,7 @@
 .dashboard-root {
   min-height: 100vh;
-  background: #f7f7fa;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  font-family: system-ui, Arial, sans-serif;
 }
 .dashboard-navbar {
   background: #7c3aed;
@@ -58,8 +58,9 @@
 }
 .dashboard-profile-card {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px #7c3aed11;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
   padding: 32px 24px;
   width: 320px;
   min-width: 260px;
@@ -71,7 +72,7 @@
   position: relative;
   width: 96px;
   height: 96px;
-  background: #ede9fe;
+  background: #f3f3f3;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -80,7 +81,7 @@
 }
 .profile-avatar-icon {
   font-size: 3.5rem;
-  color: #7c3aed;
+  color: var(--accent);
 }
 .profile-avatar-badge {
   position: absolute;
@@ -89,25 +90,25 @@
   background: #fff;
   border-radius: 50%;
   font-size: 1.3rem;
-  color: #7c3aed;
-  border: 2px solid #ede9fe;
+  color: var(--accent);
+  border: 2px solid #f3f3f3;
   padding: 2px 4px;
 }
 .profile-name {
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 600;
   margin-bottom: 4px;
 }
 .profile-email {
-  color: #6b7280;
+  color: #888;
   margin-bottom: 10px;
 }
 .profile-complete {
-  background: #16a34a;
-  color: #fff;
+  background: #e5fbe5;
+  color: #16a34a;
   font-size: 0.95rem;
   padding: 4px 16px;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 18px;
   font-weight: 500;
 }
@@ -126,7 +127,7 @@
   font-weight: 600;
 }
 .profile-applications {
-  color: #7c3aed;
+  color: var(--accent);
   font-weight: 600;
 }
 .profile-success {
@@ -139,15 +140,15 @@
   padding: 0 8px;
 }
 .dashboard-welcome {
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 8px;
-  color: #1a1a2e;
+  color: #222;
 }
 .dashboard-subtitle {
-  color: #6b7280;
+  color: #888;
   margin-bottom: 32px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 .dashboard-metrics {
   display: grid;
@@ -156,38 +157,27 @@
   margin-bottom: 32px;
 }
 .metric-card {
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 24px 18px;
-  box-shadow: 0 2px 12px #7c3aed0a;
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.metric-purple {
-  background: #ede9fe;
-}
-.metric-green {
-  background: #e0f7ef;
-}
-.metric-yellow {
-  background: #fef7e0;
-}
-.metric-white {
-  background: #fff;
-}
 .metric-title {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 500;
   margin-bottom: 6px;
 }
 .metric-value {
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 4px;
 }
 .metric-desc {
-  color: #6b7280;
+  color: #888;
   font-size: 1rem;
 }
 .dashboard-actions {
@@ -196,16 +186,18 @@
   margin-bottom: 32px;
 }
 .dashboard-btn {
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px 24px;
   border: none;
-  cursor: pointer;
-  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  background: #fff;
+  color: var(--accent);
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
 }
 .dashboard-btn-purple {
-  background: #7c3aed;
+  background: var(--accent);
   color: #fff;
 }
 .dashboard-btn-purple:hover {
@@ -213,35 +205,36 @@
 }
 .dashboard-btn-outline {
   background: #fff;
-  color: #7c3aed;
-  border: 2px solid #7c3aed;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
 }
 .dashboard-btn-outline:hover {
-  background: #ede9fe;
+  background: #f3f3f3;
 }
 .dashboard-featured {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px #7c3aed0a;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
   padding: 28px 24px;
   margin-bottom: 32px;
 }
 .featured-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #7c3aed;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
   margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 .featured-desc {
-  color: #6b7280;
+  color: #888;
   margin-bottom: 12px;
 }
 .featured-list {
   list-style: disc inside;
-  color: #1a1a2e;
+  color: #222;
   font-size: 1.05rem;
   margin-left: 18px;
 }
