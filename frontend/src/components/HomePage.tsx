@@ -12,7 +12,7 @@ const HomePage = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-900"></div>
         </div>
         <div className="relative container mx-auto px-4 py-24 md:py-32 text-center">
           <div className="max-w-4xl mx-auto">
@@ -31,7 +31,7 @@ const HomePage = () => {
                 <GraduationCap className="w-5 h-5 mr-2" />
                 Explore Scholarships
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-3">
+              <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3">
                 Learn More
               </Button>
             </div>

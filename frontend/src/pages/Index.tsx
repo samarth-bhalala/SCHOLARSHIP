@@ -5,9 +5,12 @@ import HomePage from "@/components/HomePage";
 import AboutUsPage from "@/components/AboutUsPage";
 import FAQsPage from "@/components/FAQsPage";
 import RegisterInstitutePage from "@/components/RegisterInstitutePage";
+import Login from "./Login";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState("home");
+  const navigate = useNavigate();
 
   const renderPage = () => {
     switch (currentPage) {
@@ -17,6 +20,8 @@ const Index = () => {
         return <FAQsPage />;
       case "register":
         return <RegisterInstitutePage />;
+      case "Login":
+        return <Login />;
       default:
         return <HomePage />;
     }
@@ -61,6 +66,13 @@ const Index = () => {
                 className="font-medium"
               >
                 FAQs
+              </Button>
+              <Button
+                variant={currentPage === "Login" ? "default" : "ghost"}
+                onClick={() => navigate("/login")}
+                className="font-medium"
+              >
+                Login
               </Button>
             </div>
           </div>
